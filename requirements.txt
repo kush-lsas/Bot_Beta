@@ -12,3 +12,4 @@ pinecone-client
 scikit-learn
 ruff
 git+https://github.com/openai/whisper.git
+beautifulsoup4
