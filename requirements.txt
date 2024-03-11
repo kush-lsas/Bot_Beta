@@ -13,3 +13,4 @@ scikit-learn
 ruff
 git+https://github.com/openai/whisper.git
 beautifulsoup4
+streamlit
