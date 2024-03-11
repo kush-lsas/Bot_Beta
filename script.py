@@ -12,7 +12,6 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_community.document_transformers import BeautifulSoupTransformer
 from langchain_community.vectorstores import docarray
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
-import faiss
 from langchain.vectorstores import faiss
 from langchain.docstore import in_memory
 from langchain_pinecone import PineconeVectorStore
