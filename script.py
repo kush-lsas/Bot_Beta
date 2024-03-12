@@ -16,9 +16,9 @@ from langchain.vectorstores import faiss
 from langchain.docstore import in_memory
 from langchain_pinecone import PineconeVectorStore
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-
 st.set_page_config(page_title="Interweb Explorer", page_icon="🌐")
+
+OPENAI_API_KEY = st.sidebar.text_input('OpenAI API Key', type='password')
 
 def extract_and_split_html():
     extract_path = "Web_Pages"
