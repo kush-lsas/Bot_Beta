@@ -16,7 +16,7 @@ from langchain.vectorstores import faiss
 from langchain.docstore import in_memory
 from langchain_pinecone import PineconeVectorStore
 
-st.set_page_config(page_title="Interweb Explorer", page_icon="🌐")
+st.set_page_config(page_title="UMABot", page_icon="🌐")
 
 OPENAI_API_KEY = st.sidebar.text_input('OpenAI API Key', type='password')
 os.environ["PINECONE_API_KEY"] = "ef5d4ce9-1906-4d38-a83d-dbf18b753473"
