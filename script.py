@@ -19,6 +19,7 @@ from langchain_pinecone import PineconeVectorStore
 st.set_page_config(page_title="Interweb Explorer", page_icon="🌐")
 
 OPENAI_API_KEY = st.sidebar.text_input('OpenAI API Key', type='password')
+os.environ["PINECONE_API_KEY"] = "ef5d4ce9-1906-4d38-a83d-dbf18b753473"
 
 def extract_and_split_html():
     extract_path = "Web_Pages"
