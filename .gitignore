@@ -1,6 +1,9 @@
 .vens/
 Extracted_Content/
+Extracted_Content_New/
 .streamlit/
 Web_Pages/
 /.env
 /test_script.ipynb
+Examples/
+Examples_New/
