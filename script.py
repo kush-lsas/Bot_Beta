@@ -8,11 +8,6 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain_pinecone import PineconeVectorStore
 
-from agi.stk12.stkdesktop import STKDesktop
-from agi.stk12.stkobjects import *
-from agi.stk12.stkutil import *
-from agi.stk12.vgt import *
-
 st.set_page_config(page_title="Interweb Explorer", page_icon="🌐")
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
@@ -81,7 +76,7 @@ def setup_chain():
     
     
     
-    prompt = ChatPromptTemplate.from_template(template)
+    prompt = ChatPromptTemplate.from_template(temp)
     retriever = generate_embeddings()
     setup = RunnableParallel(context=retriever, question=RunnablePassthrough())
     chain = setup | prompt | model | parser
@@ -156,4 +151,4 @@ with st.form('my_form'):
     if submitted:
         chain = setup_chain()
         output = st.write_stream(chain.stream(text))
-        ExecuteSTKScript(output)
+        #ExecuteSTKScript(output)
